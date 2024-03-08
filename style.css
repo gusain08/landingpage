@@ -390,7 +390,7 @@ header.header{
   list-style: none;
 }
 .list-group-wrap ul li{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -412,7 +412,7 @@ header.header{
   margin-bottom: 2rem;
 }
 .student-review p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.5  ;
 }
 .student-card img {
@@ -441,7 +441,9 @@ header.header{
   padding: 22px;
   border-top: none;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+
 }
 
 .at-title {
@@ -637,5 +639,8 @@ header.header{
   }
   header.header{
     padding: 1rem 1.5rem;
+  }
+  .action-btn .login{
+    padding: 10px 20px;
   }
 }
