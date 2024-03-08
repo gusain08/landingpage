@@ -643,4 +643,7 @@ header.header{
   .action-btn .login{
     padding: 10px 20px;
   }
+  .register-section {
+    padding: 0 8px;
+}
 }
