@@ -711,6 +711,29 @@
           </div>
         </section>
 
+        <section class="counterr_section container my-5" id="counter">
+          <div class="counter my-0 my-md-5">   
+            <div class="count-item">
+              <div class="count-number" data-count="36588">36.8k</div>
+              <div class="count-title">Talented Freelancer</div>
+            </div>
+            <div class="count-item">
+              <div class="count-number" data-count="458973">459k</div>
+              <div class="count-title">VIsitors</div>
+            </div>
+            <div class="count-item">
+              <div class="count-number" data-count="56461">56.5k</div>
+              <div class="count-title">Contract Made</div>
+            </div>
+            <div class="count-item">
+              <div class="count-number" data-count="852000">852k</div>
+              <div class="count-title">Companies</div>
+            </div>
+          
+          </div>
+        </section>  
+
+
         <section class="register-section mt-5 py-4 ">
           <div class="container">
             <div class="register-wrapper bg-white">
@@ -751,8 +774,61 @@
   $(".at-title").click(function () {
     $(this).toggleClass("active").next(".at-tab").slideToggle().parent().siblings().find(".at-tab").slideUp().prev().removeClass("active");
   });
+  
 });
+    // start animated-counter-on-scroll
+    jQuery(function($) {
 
+var a = 0;
+
+function nFormatter(num, digits) {
+    const lookup = [
+        { value: 1, symbol: "" },
+        { value: 1e3, symbol: "k" },
+        { value: 1e6, symbol: "M" },
+        { value: 1e9, symbol: "G" },
+        { value: 1e12, symbol: "T" },
+        { value: 1e15, symbol: "P" },
+        { value: 1e18, symbol: "E" }
+    ];
+    const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    var item = lookup.slice().reverse().find(function(item) {
+        return num >= item.value;
+    });
+    return item ? (num / item.value).toFixed(digits).replace(rx, "$1") + item.symbol : "0";
+}
+
+if($(".counter")[0]) {
+    $(window).scroll(function() {
+
+        var oTop = $('.counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.count-number').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(nFormatter(Math.floor(this.countNum), 1));
+                    },
+                    complete: function() {
+                        $this.text(nFormatter(this.countNum, 1));
+                    }
+                });
+            });
+            a = 1;
+        }
+
+    });
+}
+
+});
 
 </script>
 </body>

@@ -483,9 +483,7 @@ header.header{
 .at-item {
   border-radius: 5px; 
   margin-bottom: 15px;
-  background-image: url('./img/Abstract\ Design.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
+ 
   background-color: #262626;
 }
 
@@ -530,6 +528,68 @@ header.header{
   margin-bottom: 10rem;
 }
 
+.counter {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  /* background-color: #5F4BDB; */
+   background-image: url('./img/Abstract\ Design.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 60px;
+  overflow: hidden;
+  padding: 80px;
+  border-radius: 20px;
+  -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+}
+
+.counter .count-item {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  text-align: center;
+  z-index: 5;
+}
+.counter .count-item .count-number {
+  font-size: calc(1.4375rem + 2.25vw);
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+
+.counter .count-item .count-title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px){
+  .counter {
+      -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  }
+  }
+  
+
+
+@media (min-width: 992px){
+.counter {
+    -ms-grid-columns: auto 60px auto 60px auto 60px auto;
+    grid-template-columns: auto auto auto auto;
+    gap: 0 60px;
+    padding: 80px;
+}
+.counter .count-item {
+  gap: 15px;
+}
+.counter .count-item .count-number {
+  font-size: 3.125rem;
+}
+}
+
+
+
 
 @media (max-width:991.98px){
 
@@ -541,12 +601,7 @@ header.header{
     left: 0;
     transform: translate(-100%);
   }
-  .menu{
-    font-size: 3rem;
-    color: #E4E4E7;
-    display: inline-block;
-    cursor: pointer;
-  }
+  
   .hero-section{
     flex-wrap: wrap;
   }
@@ -607,14 +662,10 @@ header.header{
     display: block;
   }
 
-
-
 }
 
 @media (max-width:767px){
-  header{
-    width: 100%;
-  }
+
   .objects-section{
     margin: 4rem;
    width: 100%;
@@ -645,5 +696,8 @@ header.header{
   }
   .register-section {
     padding: 0 8px;
+}
+.counter{
+  padding: 20px;
 }
 }
