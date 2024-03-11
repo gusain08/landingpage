@@ -483,9 +483,9 @@ header.header{
 .at-item {
   border-radius: 5px; 
   margin-bottom: 15px;
-  background-image: url('./img/Abstract\ Design.svg');
+/*   background-image: url('./img/Abstract\ Design.svg');
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   background-color: #262626;
 }
 
