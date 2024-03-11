@@ -483,7 +483,13 @@ header.header{
 .at-item {
   border-radius: 5px; 
   margin-bottom: 15px;
+<<<<<<< HEAD
  
+=======
+/*   background-image: url('./img/Abstract\ Design.svg');
+  background-size: contain;
+  background-repeat: no-repeat; */
+>>>>>>> 9b2dcd1a75dc8c047ccb5dd94ce640cae5e5c0be
   background-color: #262626;
 }
 
@@ -697,7 +703,11 @@ header.header{
   .register-section {
     padding: 0 8px;
 }
+<<<<<<< HEAD
 .counter{
   padding: 20px;
 }
 }
+=======
+}
+>>>>>>> 9b2dcd1a75dc8c047ccb5dd94ce640cae5e5c0be
